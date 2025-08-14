@@ -7,7 +7,7 @@ function TodoPage() {
 
   // Fetch all todos
   useEffect(() => {
-    fetch('http://localhost:5000/api/todos')
+    fetch('http://http://todo-backend-production-1458.up.railway.app/api/auth/signup/api/todos')
       .then(res => res.json())
       .then(data => setTodos(data));
   }, []);
@@ -15,7 +15,7 @@ function TodoPage() {
   // Add new todo
   const handleAdd = async () => {
     if (!text.trim()) return;
-    const response = await fetch('http://localhost:5000/api/todos', {
+    const response = await fetch('http://todo-backend-production-1458.up.railway.app/api/todos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text }),
@@ -27,7 +27,7 @@ function TodoPage() {
 
   // Delete todo
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:5000/api/todos/${id}`, { method: 'DELETE' });
+    await fetch(`http://todo-backend-production-1458.up.railway.app/api/todos/${id}`, { method: 'DELETE' });
     setTodos(todos.filter(todo => todo._id !== id));
   };
 

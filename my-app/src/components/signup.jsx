@@ -14,7 +14,7 @@ function Signup() {
       return;
     }
 
-    const response = await fetch('http://localhost:5000/api/auth/signup', {
+    const response = await fetch('http://todo-backend-production-1458.up.railway.app/api/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
