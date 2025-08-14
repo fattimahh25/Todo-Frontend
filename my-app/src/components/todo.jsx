@@ -7,7 +7,7 @@ function TodoPage() {
 
   // Fetch all todos
   useEffect(() => {
-    fetch('http://http://todo-backend-production-1458.up.railway.app/api/auth/signup/api/todos')
+    fetch('http://todo-backend-production-1458.up.railway.app/api/auth/signup/api/todos')
       .then(res => res.json())
       .then(data => setTodos(data));
   }, []);
