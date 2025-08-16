@@ -39,7 +39,7 @@ const PortfolioForm = () => {
 
   const savePortfolio = async () => {
     try {
-      const res = await axios.post("http://todo-backend-production-8ee8.up.railway.app/api/portfolio", {
+      const res = await axios.post("https://todo-backend-production-8ee8.up.railway.app/api/portfolio", {
         ...formData,
         skills: formData.skills.split(",").map((s) => s.trim()),
       });
