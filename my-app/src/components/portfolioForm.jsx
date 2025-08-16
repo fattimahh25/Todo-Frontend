@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Portfolio from "./portfolio";
-import "./Portfolio.css";
+import "./portfolio.css";
 
-const PortfolioForm = () => {
+const PortfolioForm = () => { 
   const [step, setStep] = useState(1);
   const [savedId, setSavedId] = useState(null);
   const [formData, setFormData] = useState({
