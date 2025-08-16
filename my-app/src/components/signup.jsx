@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 import '../index.css';
 
 function Signup() {
@@ -22,15 +23,26 @@ function Signup() {
 
     const data = await response.json();
 
-    if (response.ok) {
-      alert('Signup successful');
-    } else {
-      alert(data.message);
-    }
+if (response.ok) {
+  Swal.fire({
+    icon: 'success',
+    title: 'Signup Successful 🎉',
+    text: 'Your account has been created!',
+    showConfirmButton: false,
+    timer: 2000, // auto close in 2s
+  });
+} else {
+  Swal.fire({
+    icon: 'error',
+    title: 'Signup Failed',
+    text: data.message || 'Something went wrong!',
+    confirmButtonColor: '#4f46e5',
+  });
+}
   };
 
   return (
-    <form onSubmit={handleSignup}>
+    <form className="form-container" onSubmit={handleSignup}>
       <h2>Signup</h2>
       <input
         type="email"

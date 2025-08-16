@@ -3,13 +3,129 @@ body {
   background: #f3f4f6;
   margin: 0;
   padding: 0;
+   background-image: url('../public/background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 150vh;
+}
+.navbar {
+   background: rgba(127, 124, 124, 0.2); /* white with 20% opacity */
+  backdrop-filter: blur(10px);          /* blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */  color: white;
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo{
+  font-weight: bold;
+  font-size: large;
+  color: white;
+  transition: transform 0.3s;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+.links {
+  display: flex;
+  transition: transform 0.3s;
+  color: white;
+}
+.links, link{
+  color: white;
+}
+.links:hover {
+  transform: scale(1.05);
+  color: #b1aed3;
+}
+.form-container {
+   background: rgba(127, 124, 124, 0.2); /* white with 20% opacity */
+  backdrop-filter: blur(10px);          /* blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  max-width: 400px;
+  width: 100%;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+form:hover{
+  transform: scale(1.05);
 }
 
-form {
+form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+input, select {
+  width: 100%;
+    background: rgba(90, 89, 89, 0.2); /* white with 20% opacity */
+  backdrop-filter: blur(10px);          /* blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  padding: 12px;
+  margin: 8px 0 16px;
+  color: white;
+  border: 1px solid #a997ad;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+input, ::placeholder{
+  color: white;
+}
+input:focus, select:focus {
+  border-color: #a997ad;
+  box-shadow: 0 0 5px rgba(169, 151, 173, 0.5);
+}
+input, select:focus {
+  outline: none;
+  border-color: #a997ad;
+}
+
+
+/* Dropdown options */
+
+button {
+  width: 100%;
+  background-color: #443242;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #3B2E3F;
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
+  color: #fff;
+}
+
+a {
+  color: #a997ad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* form {
   background: white;
   padding: 30px;
   border-radius: 12px;
@@ -45,7 +161,7 @@ button {
 
 button:hover {
   background: #4338ca;
-}
+} */
 
 nav {
   position: absolute;
@@ -55,7 +171,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #4f46e5;
+  color: white;
   margin: 0 10px;
   font-weight: 500;
 }

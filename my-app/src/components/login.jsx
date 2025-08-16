@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import '../index.css';
 
 function Login() {
@@ -17,17 +18,31 @@ function Login() {
 
     const data = await response.json();
 
-    if (response.ok) {
-      localStorage.setItem('token', data.token);
-      alert('Login successful');
-       navigate('/todo');
-    } else {
-      alert(data.message);
-    }
+if (response.ok) {
+  localStorage.setItem('token', data.token);
+
+  Swal.fire({
+    icon: 'success',
+    title: 'Login Successful',
+    text: 'Welcome to your portfolio!',
+    showConfirmButton: false,
+    timer: 2000, // auto-close after 2s
+  });
+
+  navigate('/portfolio'); // Redirect to portfolio page
+} else {
+  Swal.fire({
+    icon: 'error',
+    title: 'Login Failed',
+    text: data.message || 'Something went wrong!',
+    confirmButtonColor: '#4f46e5',
+  });
+}
+
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <form className="form-container" onSubmit={handleLogin}>
       <h2>Login</h2>
       <input
         type="email"

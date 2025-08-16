@@ -1,0 +1,46 @@
+.form-container {
+   background: rgba(127, 124, 124, 0.2); /* white with 20% opacity */
+  backdrop-filter: blur(10px);          /* blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.form-container:hover{
+  transform: scale(1.05);
+}
+
+input,
+textarea {
+  width: 100%;
+    background: rgba(90, 89, 89, 0.2); /* white with 20% opacity */
+  backdrop-filter: blur(10px);          /* blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  padding: 12px;
+  margin: 8px 0 16px;
+  color: white;
+  border: 1px solid #a997ad;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #a997ad;
+  box-shadow: 0 0 5px rgba(169, 151, 173, 0.5);
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+button {
+  margin: 5px 0;
+  width: 100%;
+}

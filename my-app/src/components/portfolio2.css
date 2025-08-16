@@ -1,0 +1,98 @@
+/* Portfolio.css */
+
+.portfolio-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08); /* glassmorphism style */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Headings */
+.portfolio-container h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a29bfe;
+}
+
+.portfolio-container h2 {
+  font-size: 1.8rem;
+  margin: 25px 0 15px;
+  border-left: 5px solid #6c5ce7;
+  padding-left: 10px;
+  color: #dfe6e9;
+}
+
+.portfolio-container h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #81ecec;
+}
+
+/* Text */
+.portfolio-container p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Links */
+.portfolio-container a {
+  color: #00cec9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.portfolio-container a:hover {
+  color: #fab1a0;
+  text-decoration: underline;
+}
+
+/* Skills list */
+.portfolio-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.portfolio-container ul li {
+  background: #2d3436;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #dfe6e9;
+  transition: background 0.3s;
+}
+
+.portfolio-container ul li:hover {
+  background: #636e72;
+}
+
+/* Project cards */
+.project {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 18px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
